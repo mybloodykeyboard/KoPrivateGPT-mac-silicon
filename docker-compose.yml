@@ -11,16 +11,11 @@ services:
         OPENAI_API_KEY: ${OPENAI_API_KEY}
         PINECONE_API_KEY: ${PINECONE_API_KEY}
         PINECONE_ENV: ${PINECONE_ENV}
-      deploy:
-        resources:
-          reservations:
-            devices:
-              - driver: nvidia
-                  count: all
-                  capabilities: [ gpu ]
+      platform: linux/amd64
+        
 
     hwp-converter:
       ports:
-        - '7000:7000'
+        - '127.0.0.1:7000'
       container_name: hwp-converter
       image: 'vkehfdl1/hwp-converter-api:1.0.0'

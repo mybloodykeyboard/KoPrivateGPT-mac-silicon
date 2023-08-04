@@ -5,7 +5,7 @@ from chromadb.config import Settings
 
 class Options(object):
     root_dir = pathlib.PurePath(os.path.dirname(os.path.realpath(__file__))).parent
-    source_dir = os.path.join(root_dir, "SOURCE_DOCUMENTS")
+    source_dir = os.path.join(root_dir, "docs")
     embedded_files_cache_dir = os.path.join(root_dir, "embedded_files_cache.pkl")
     bm25_db_dir = os.path.join(root_dir, "bm25_db.pkl")
 
@@ -23,4 +23,4 @@ class ChromaOptions(object):
 
 
 class PineconeOptions(object):
-    index_name = "ko-private-gpt"
+    index_name = "chatpdf"

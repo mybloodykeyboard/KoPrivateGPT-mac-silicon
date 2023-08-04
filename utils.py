@@ -5,9 +5,9 @@ import csv
 import tempfile
 from transformers import StoppingCriteria
 import torch
+from typing import List
 
-
-def xlxs_to_csv(file_path: str, sheet_name: str = None) -> list[str]:
+def xlxs_to_csv(file_path: str, sheet_name: str = None) -> List[str]:
     """
     Convert a workbook into a list of csv files
     :param file_path: the path to the workbook

@@ -17,7 +17,7 @@ from retrieve import BM25Retriever
 from utils import xlxs_to_csv
 
 HwpConvertOpt = 'all'  # 'main-only'
-HwpConvertHost = f'http://hwp-converter:7000/upload?option={HwpConvertOpt}'
+HwpConvertHost = f'http://127.0.0.1:7000/upload?option={HwpConvertOpt}'
 
 
 def load_single_document(file_path: str) -> Document:
